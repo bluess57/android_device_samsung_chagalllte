@@ -44,6 +44,8 @@ USE_CLANG_PLATFORM_BUILD := true
 # GPS-shims
 TARGET_LD_SHIM_LIBS := /system/bin/gpsd|libshim.so
 
+TARGET_LD_SHIM_LIBS := /system/lib/libsec-ril|libshim.so
+
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_chagalllte_defconfig
 BOARD_CUSTOM_BOOTIMG := true
@@ -66,6 +68,13 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # SELinux
 BOARD_SEPOLICY_DIRS += device/samsung/exynos5420-common/sepolicy
 BOARD_SEPOLICY_DIRS += device/samsung/chagalllte/sepolicy
+
+BOARD_KERNEL_CMDLINE := enforcing=0 androidboot.selinux=permissive
+BOARD_HAVE_SAMSUNG_WIFI := true
+
+WIFI_DRIVER_MODULE_ARG           := "firmware_path=/system/etc/wifi/bcmdhd_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
+WIFI_DRIVER_MODULE_AP_ARG        := "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
+WIFI_BAND                        := 802_11_ABG
 
 # Fixes screen flicker
 TARGET_FORCE_SCREENSHOT_CPU_PATH := true

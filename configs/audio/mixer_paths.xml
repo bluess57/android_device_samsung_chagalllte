@@ -118,14 +118,14 @@
     <!-- ########## Channels ########## -->
 
     <path name="channel-left">
-        <ctl name="AIF1TX1 Input 1" value="LHPF1" />
+<!--        <ctl name="AIF1TX1 Input 1" value="LHPF1" /> -->
         <ctl name="AIF1TX2 Input 1" value="LHPF1" />
         <ctl name="ASRC1L Input" value="LHPF1" />
         <ctl name="ASRC1R Input" value="LHPF1" />
     </path>
 
     <path name="channel-right">
-        <ctl name="AIF1TX1 Input 1" value="LHPF2" />
+<!--        <ctl name="AIF1TX1 Input 1" value="LHPF2" /> -->
         <ctl name="AIF1TX2 Input 1" value="LHPF2" />
         <ctl name="ASRC1L Input" value="LHPF2" />
         <ctl name="ASRC1R Input" value="LHPF2" />
@@ -137,7 +137,7 @@
     </path>
 
     <path name="verb-normal">
-        <ctl name="AIF2 Mode" value="Master" />
+<!--        <ctl name="AIF2 Mode" value="Master" /> -->
         <ctl name="EPOUT DRE Switch" value="1" />
         <ctl name="HPOUT1 DRE Switch" value="1" />
         <ctl name="EPOUT Input 3" value="None" />
@@ -148,7 +148,7 @@
     </path>
 
     <path name="verb-voicecall">
-        <ctl name="AIF2 Mode" value="Slave" />
+<!--        <ctl name="AIF2 Mode" value="Slave" /> -->
         <ctl name="EPOUT DRE Switch" value="0" />
         <ctl name="HPOUT1 DRE Switch" value="0" />
         <ctl name="EPOUT Input 3" value="ASRC2L" />

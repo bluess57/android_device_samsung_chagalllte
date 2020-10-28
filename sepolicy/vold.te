@@ -1,0 +1,2 @@
+allow vold gpsd_exec:file getattr;
+allow vold efs_file:dir { read open ioctl };

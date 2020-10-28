@@ -1,0 +1,11 @@
+#allow mediaserver hal_ionmemory_default:binder call;
+#allow mediaserver hal_ionmemory_hwservice:hwservice_manager find;
+#allow mediaserver hal_ionmemory_default:fd use;
+
+allow mediaserver gpsd_exec:file getattr;
+allow mediaserver camera_device:chr_file rw_file_perms;
+allow mediaserver system_prop:property_service set;
+allow mediaserver hal_camera_default:binder call;
+allow mediaserver hal_camera_default:binder transfer;
+allow mediaserver camera_prop:property_service set;
+allow mediaserver ion_device:chr_file rw_file_perms;

@@ -1,0 +1,10 @@
+allow shell gpsd_exec:file getattr;
+allow shell sysfs:file { read open getattr };
+allow shell vndservice_contexts_file:file getattr;
+
+allow shell efs_file:dir getattr;
+allow shell hwservice_contexts_file:file getattr;
+allow shell nonplat_service_contexts_file:file getattr;
+allow shell rootfs:file getattr;
+allow shell unlabeled:dir getattr;
+allow shell init_exec:file getattr;

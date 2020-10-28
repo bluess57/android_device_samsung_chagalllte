@@ -1,11 +1,22 @@
 import init.baseband.rc
 
+#ijh experimental
+import hostapd.rc
+
 on init
     export LD_SHIM_LIBS "/system/bin/gpsd|libshim.so"
 
 on post-fs-data
 # Open permissions for touchkey_enable so KeyDisabler can write to it
     chown system root /sys/devices/virtual/sec/sec_touchkey/touchkey_enabled
+
+    chmod 0666 /sys/module/wlan/parameters/fwpath
+
+    mkdir /data/vendor/camera 0770 camera camera
+
+# camera server uses files under this directory via a kernel module for the FIMC, trying chmod since chown not successful
+    chown cameraserver audio /data/misc/media
+    chmod 0776 /data/misc/media
 
 on boot
 

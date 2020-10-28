@@ -1,0 +1,2 @@
+allow logd gpsd_exec:file getattr;
+allow logd sysfs:file rw_file_perms;

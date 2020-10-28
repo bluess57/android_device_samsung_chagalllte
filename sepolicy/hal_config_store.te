@@ -1,0 +1,3 @@
+#============= hal_configstore_default ==============
+allow hal_configstore_default gpsd_exec:file { getattr };
+allow hal_configstore_default sysfs:file read;

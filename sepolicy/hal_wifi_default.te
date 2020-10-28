@@ -1,0 +1,8 @@
+# getting a denial for allow hal_wifi_default system_data_file:file { read write };
+allow hal_wifi_default efs_file:dir search;
+allow hal_wifi_default wifi_efs_file:dir search;
+allow hal_wifi_default gpsd_exec:file getattr;
+
+allow hal_wifi_default wifi_data_file:file { read write open };
+allow hal_wifi_default wifi_efs_file:file { read open };
+allow hal_wifi_default wifi_data_file:file rw_file_perms;
